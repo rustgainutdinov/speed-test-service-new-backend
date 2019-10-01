@@ -29,5 +29,8 @@ class Domain {
             onSuccess(namesList);
         }, onError, user);
     }
+    getUrlsListWithPerformance(user, onSuccess, onError) {
+        App_1.default.getDBInstance().execute('get_urls_list_with_performance', { domain: this.name }, onSuccess, onError, user);
+    }
 }
 exports.default = Domain;

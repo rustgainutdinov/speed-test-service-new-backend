@@ -5,5 +5,6 @@ const queries_user_1 = require("./queries_user");
 const queries_domain_1 = require("./queries_domain");
 const queries_speed_test_service_1 = require("./queries_speed_test_service");
 const queries_url_1 = require("./queries_url");
-const queries = Array.prototype.concat(queries_google_speed_test_1.default, queries_user_1.default, queries_domain_1.default, queries_speed_test_service_1.default, queries_url_1.default);
+const queries_test_data_getters_1 = require("./queries_test_data_getters");
+const queries = Array.prototype.concat(queries_google_speed_test_1.default, queries_user_1.default, queries_domain_1.default, queries_speed_test_service_1.default, queries_url_1.default, queries_test_data_getters_1.default);
 exports.default = queries;

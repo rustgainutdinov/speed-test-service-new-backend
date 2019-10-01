@@ -40,6 +40,10 @@ class Domain {
             }, onError, user
         );
     }
+
+    getUrlsListWithPerformance(user: User, onSuccess: Function, onError: Function) {
+        App.getDBInstance().execute('get_urls_list_with_performance', {domain: this.name}, onSuccess, onError, user);
+    }
 }
 
 export default Domain

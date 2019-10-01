@@ -1,5 +1,5 @@
 import App from "../App";
-import ITestingServerInfo from "../interfaces/ITestingServerInfo";
+import ITestingServerInfo from "../interfaces/testingServer/ITestingServerInfo";
 import comparePass from "../methods/crypt/comparePass";
 import * as generateGUID from 'uuid/v4';
 import IReceivedTestingData from "../interfaces/testingServer/IReceivedTestingData";

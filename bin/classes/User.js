@@ -86,7 +86,7 @@ class User {
         App_1.default.getDBInstance().execute('user_unsubscribe_to_domain', { domain, token: this.token }, onSuccess, onError);
     }
     getDomainsSubscriptions(onSuccess, onError) {
-        App_1.default.getDBInstance().execute('get_user_subscriptions', { token: this.token }, onSuccess, onError);
+        App_1.default.getDBInstance().execute('get_user_domain_subscriptions', { token: this.token }, onSuccess, onError);
     }
 }
 exports.default = User;

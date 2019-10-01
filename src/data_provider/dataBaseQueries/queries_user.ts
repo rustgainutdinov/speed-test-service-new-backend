@@ -40,7 +40,7 @@ const userQueries: IQueryArray = [
     {
         name: 'get_user_domain_subscriptions',
         rights: 0,
-        sql: 'SELECT d.name as domain' +
+        sql: 'SELECT d.name as domain ' +
             'FROM user_has_subscribed_to_domain ' +
             '         INNER JOIN "user" u on user_has_subscribed_to_domain.id_user = u.id_user ' +
             '         INNER JOIN domain d on user_has_subscribed_to_domain.id_domain = d.id_domain ' +

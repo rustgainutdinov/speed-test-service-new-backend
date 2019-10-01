@@ -12,8 +12,8 @@ const UserRoute = {
             .post('/create', create_1.default)
             .get('/login', login_1.default)
             .get('/get_data_by_token', getUserDataByToken_1.default)
-            .get('/subscribe_to_domain', subscribeToDomain_1.default)
-            .get('/unsubscribe_to_domain', unscribeToDomain_1.default)
+            .post('/subscribe_to_domain', subscribeToDomain_1.default)
+            .post('/unsubscribe_to_domain', unscribeToDomain_1.default)
             .get('/get_user_subscriptions', getUserSubscriptionsRoute_1.default);
     }
 };

@@ -96,7 +96,7 @@ class User {
     }
 
     getDomainsSubscriptions(onSuccess: Function, onError: Function) {
-        App.getDBInstance().execute('get_user_subscriptions', {token: this.token}, onSuccess, onError);
+        App.getDBInstance().execute('get_user_domain_subscriptions', {token: this.token}, onSuccess, onError);
     }
 }
 

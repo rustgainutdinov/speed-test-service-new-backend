@@ -12,8 +12,8 @@ const UserRoute: IApplicationRoute = {
             .post('/create', createUserRoute)
             .get('/login', loginUserRoute)
             .get('/get_data_by_token', getUserDataByTokenRoute)
-            .get('/subscribe_to_domain', subscribeToDomainRoute)
-            .get('/unsubscribe_to_domain', unsubscribeToDomainRoute)
+            .post('/subscribe_to_domain', subscribeToDomainRoute)
+            .post('/unsubscribe_to_domain', unsubscribeToDomainRoute)
             .get('/get_user_subscriptions', getUserSubscriptionsRoute)
     }
 };

@@ -6,6 +6,7 @@ const DomainRoute_1 = require("./DomainRoute");
 const UrlRoute_1 = require("./UrlRoute");
 const PagesRoute_1 = require("./PagesRoute");
 const TestingServerRoute_1 = require("./TestingServerRoute");
+const TestDataGettersRoute_1 = require("./TestDataGettersRoute");
 class AppRoutes {
     constructor() {
         this.routeList = [
@@ -14,6 +15,7 @@ class AppRoutes {
             { path: '/url', router: UrlRoute_1.default },
             { path: '/pages', router: PagesRoute_1.default },
             { path: '/testing_server', router: TestingServerRoute_1.default },
+            { path: '/test_data_getters', router: TestDataGettersRoute_1.default },
         ];
     }
     mount(expApp) {
