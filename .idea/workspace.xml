@@ -1,7 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6a97b38-6b5f-471b-8f33-845fdfcc66fb" name="Default Changelist" comment="" />
+    <list default="true" id="f6a97b38-6b5f-471b-8f33-845fdfcc66fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/PageSpeedTest.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/TestingServer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/Url.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/speedTest/auditIndicators.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_url.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/ITestingServerInfo.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/domain/IDataWithDomainName.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/domain/IFullDomainData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/domain/IGroupedByDomainNameData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/pages/IFullInfoAboutUrlsAndDomains.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/testingServer/IReceivedTestingData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/testingServer/ITestingDataToSave.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/url/IFullUrlData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/url/IUrlDataOnlyWithName.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/url/IUrlNameAndModeList.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/url/IUrlsDataOnlyWithNameList.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/methods/domain/groupDataByDomainName.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/methods/pages/getInfoAboutUrlAndDomainForAdminPanel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/methods/pages/mergeFullInfoAboutUrlsAndDomains.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/methods/testingServer/prepareTestingDataToSave.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/methods/url/getNamesListFromUrlsDataOnlyWithNameList.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/DomainRoute/changeIsFavouriteField.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/DomainRoute/create.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/DomainRoute/getUrlsListByDomain.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/DomainRoute/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/DomainRoute/remove.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/PagesRoute/getInfoAboutUrlAndDomainForAdminPanel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/PagesRoute/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/TestingServerRoute/getTokenByAppKey.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/TestingServerRoute/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/TestingServerRoute/saveTestingData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/TestingServerRoute/testAllUrls.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/TestingServerRoute/testUrlsList.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/UrlRoute/changeIsFavouriteField.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/UrlRoute/create.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/UrlRoute/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/UrlRoute/remove.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Domain.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/classes/Domain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/classes/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_domain.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_domain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_google_speed_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_google_speed_test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_speed_test_service.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_speed_test_service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_user.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/routes/AppRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/routes/AppRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Domain.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Domain.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_domain.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_domain.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_google_speed_test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_google_speed_test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_speed_test_service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_speed_test_service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/methods/user/comparePass.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/methods/crypt/comparePass.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/methods/user/cryptPass.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/methods/crypt/cryptPass.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/AppRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/AppRoutes.ts" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,24 +69,34 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="tsconfig.json" />
         <option value="TypeScript File" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1REeWd3phMCqsA4B3s5oKh2KfdX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="js.last.introduce.type" value="CONST" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/routes/TestingServerRoute" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\routes\TestingServerRoute" />
+      <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\constants\speedTest" />
+      <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\methods" />
+      <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\routes\PagesRoute" />
       <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src" />
-      <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\interfaces\routes" />
-      <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\routes" />
-      <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\classes" />
-      <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\data_types\db" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\data_types\db" />
@@ -89,11 +157,22 @@
       <option name="presentableId" value="Default" />
       <updated>1569236714422</updated>
       <workItem from="1569236715780" duration="2024000" />
-      <workItem from="1569331163978" duration="21864000" />
+      <workItem from="1569331163978" duration="50871000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -64,4 +64,4 @@ const userQueries = [
             '         INNER JOIN url u2 on d.id_domain = u2.id_domain;'
     }
 ];
-exports.userQueries = userQueries;
+exports.default = userQueries;

@@ -1,4 +1,4 @@
-import {IQueryArray} from "../../core/IQuery";
+import IQueryArray from "../../interfaces/db/IQueryArray";
 
 const googleSpeedTestQueries: IQueryArray = [
     {
@@ -10,17 +10,31 @@ const googleSpeedTestQueries: IQueryArray = [
     {
         name: 'get_statistics_for_main_page',
         rights: 100,
-        sql: 'SELECT date_trunc(\'day\', date_time)::date as date, mode, d3.id_domain, d3.name as domain, u.name as url, performance as score ' +
+        sql: 'SELECT date_trunc(\'day\', date_time)::date as date, mode, d3.id_domain, d3.name as domain, u.name as url, value ' +
             'FROM test ' +
-            '       INNER JOIN test_data d2 on test.id_test = d2.id_test ' +
-            '       INNER JOIN url u on d2.id_url = u.id_url ' +
-            '       INNER JOIN domain d3 on u.id_domain = d3.id_domain ' +
+            '         INNER JOIN test_data d2 on test.id_test = d2.id_test ' +
+            '         INNER JOIN url u on d2.id_url = u.id_url ' +
+            '         INNER JOIN domain d3 on u.id_domain = d3.id_domain ' +
+            '         INNER JOIN indicator_name "in" on d2.id_indicator_name = "in".id_indicator_name ' +
             'WHERE by_user = false ' +
             '  AND d3.favourite = true ' +
-            ' AND date_trunc(\'day\', date_time) > date_trunc(\'day\', now() - interval \'7 days\')' +
-            '      AND d3.is_deleted = \'FALSE\' AND u.is_deleted = \'FALSE\' ' +
-            '      AND d3.favourite = \'TRUE\' AND u.favourite = \'TRUE\';'
+            '  AND date_trunc(\'day\', date_time) > date_trunc(\'day\', now() - interval \'7 days\') ' +
+            '  AND d3.is_deleted = \'FALSE\' ' +
+            '  AND u.is_deleted = \'FALSE\' ' +
+            '  AND d3.favourite = \'TRUE\' ' +
+            '  AND u.favourite = \'TRUE\' ' +
+            '  AND "in".name = \'performance\';'
     },
+
+
+
+
+
+
+
+
+
+
     {
         name: 'get_urls_list_with_performance_by_domain_name',
         rights: 100,
@@ -133,4 +147,4 @@ const googleSpeedTestQueries: IQueryArray = [
     }
 ];
 
-export {googleSpeedTestQueries}
+export default googleSpeedTestQueries

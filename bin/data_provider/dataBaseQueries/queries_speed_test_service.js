@@ -14,23 +14,15 @@ const speedTestServiceQueries = [
 					SET token = ?(token)
 					WHERE ip = ?(ip);`
     }, {
-        name: 'add_speed_test_service_testing_data',
+        name: 'save_testing_data',
         rights: 0,
-        sql: 'INSERT INTO test_data (performance, id_user, id_speed_test_service, id_test, id_url, ' +
-            'first_contentful_paint, speed_index, interactive, first_meaningful_paint, first_cpu_idle, ' +
-            'estimated_input_latency, uses_rel_preload, render_blocking_resources, unused_css_rules, ' +
-            'mainthread_work_breakdown, uses_long_cache_ttl, dom_size, bootup_time, offscreen_images,' +
-            ' unminified_css, unminified_javascript, uses_optimized_images, time_to_first_byte, redirects, mode) ' +
-            'VALUES ?[?{data} ?(performance),' +
-            '    NULL,' +
+        sql: 'INSERT INTO test_data (id_user, id_speed_test_service, id_test, id_indicator_name, id_url, mode, value) ' +
+            'VALUES ?[?{data} NULL,' +
             '    (SELECT id_speed_test_service FROM speed_test_service WHERE token = ?(token)),' +
             '    ?(idTest),' +
+            '    (SELECT id_indicator_name FROM indicator_name WHERE name = ?(indicator)),' +
             '    (SELECT id_url FROM url WHERE name = ?(url)),' +
-            '?(first_contentful_paint), ?(speed_index), ?(interactive), ?(first_meaningful_paint), ' +
-            '?(first_cpu_idle), ?(estimated_input_latency), ?(uses_rel_preload), ?(render_blocking_resources), ' +
-            '?(unused_css_rules), ?(mainthread_work_breakdown), ?(uses_long_cache_ttl), ?(dom_size),' +
-            ' ?(bootup_time), ?(offscreen_images), ?(unminified_css), ?(unminified_javascript),' +
-            ' ?(uses_optimized_images), ?(time_to_first_byte), ?(redirects), ?(mode)]'
+            ' ?(mode), ?(value)]'
     }, {
         name: 'get_last_url_speed_test_data',
         rights: 0,
@@ -45,4 +37,4 @@ const speedTestServiceQueries = [
             'OFFSET 2;'
     }
 ];
-exports.speedTestServiceQueries = speedTestServiceQueries;
+exports.default = speedTestServiceQueries;

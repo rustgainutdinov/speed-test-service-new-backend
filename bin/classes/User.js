@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const generateGUID = require("uuid/v4");
-const cryptPass_1 = require("../methods/user/cryptPass");
-const comparePass_1 = require("../methods/user/comparePass");
+const cryptPass_1 = require("../methods/crypt/cryptPass");
+const comparePass_1 = require("../methods/crypt/comparePass");
 const App_1 = require("../App");
 class User {
     constructor(token, email, pass) {

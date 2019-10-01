@@ -65,4 +65,4 @@ const userQueries: IQueryArray = [
     }
 ];
 
-export {userQueries}
+export default userQueries

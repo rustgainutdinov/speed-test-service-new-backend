@@ -1,6 +1,6 @@
 import * as generateGUID from 'uuid/v4';
-import cryptPass from "../methods/user/cryptPass";
-import comparePass from "../methods/user/comparePass";
+import cryptPass from "../methods/crypt/cryptPass";
+import comparePass from "../methods/crypt/comparePass";
 import IQueryData from '../interfaces/db/IQueryData'
 import App from "../App";
 import IPublicUserData from "../interfaces/user/IPublicUserData";
