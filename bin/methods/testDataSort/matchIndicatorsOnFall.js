@@ -19,7 +19,6 @@ function matchIndicatorsOnFall(standardIndicators, actualIndicators) {
         if (!standardIndicator || !actualIndicator) {
             continue;
         }
-        console.log(standardIndicator, actualIndicator, indicator);
         if ((indicator === 'performance' && (standardIndicator - actualIndicator) > criticalPerformanceChange_1.default)
             || (standardIndicator - actualIndicator) > criticalIndicatorChange_1.default) {
             fallenIndicator = {

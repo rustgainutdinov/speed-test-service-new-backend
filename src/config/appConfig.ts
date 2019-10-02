@@ -6,7 +6,7 @@ const APP_CONFIG: IApplicationConfig = {
 	db: {
 		user: process.env.NODE_ENV === 'production' ? 'postgres' : 'postgres',//postgres
 		host: 'localhost',
-		database: process.env.NODE_ENV === 'production' ? 'speed_test_service' : 'speed-test-service',//page-uppers
+		database: process.env.NODE_ENV === 'production' ? 'speed-test-service' : 'speed-test-service',//page-uppers
 		password: process.env.NODE_ENV === 'production' ? 'Ehwuidzn0672' : '!QA2ws#ED',//gv9y3ytsow
 		port: 5432
 	}

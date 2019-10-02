@@ -1,5 +1,6 @@
 import IDataWithDomainName from "../../interfaces/domain/IDataWithDomainName";
 import IGroupedByDomainNameData from "../../interfaces/domain/IGroupedByDomainNameData";
+import IFullUrlData from "../../interfaces/url/IFullUrlData";
 
 function groupDataByDomainName(data: Array<IDataWithDomainName>): IGroupedByDomainNameData {
     let sortedData: IGroupedByDomainNameData = {};
@@ -7,7 +8,7 @@ function groupDataByDomainName(data: Array<IDataWithDomainName>): IGroupedByDoma
         if (!sortedData[item.domain]) {
             sortedData[item.domain] = [];
         }
-        sortedData[item.domain].push(item);
+        sortedData[item.domain].push(<IFullUrlData>item);
     });
     return sortedData
 }

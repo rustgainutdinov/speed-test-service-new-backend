@@ -1,6 +1,6 @@
 interface IDataWithDomainName {
     domain: string,
-    [otherProp: string]: any
+    [otherProp: string]: any,
 }
 
 export default IDataWithDomainName
