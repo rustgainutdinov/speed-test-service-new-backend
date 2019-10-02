@@ -4,6 +4,7 @@ import changeIsFavouriteFieldRoute from "./changeIsFavouriteField";
 import removeDomainRoute from "./remove";
 import getUrlsListByDomain from "./getUrlsListByDomain";
 import getUrlsLIstWithPerformanceRoute from "./getUrlsLIstWithPerformance";
+import getFullInfoAboutAllDomainsRoute from "./getFullInfoAboutAllDomains";
 
 const DomainRoute: IApplicationRoute = {
     createRouter(router) {
@@ -13,6 +14,7 @@ const DomainRoute: IApplicationRoute = {
             .post('/remove', removeDomainRoute)
             .get('/get_urls_list', getUrlsListByDomain)
             .get('/get_urls_list_with_performance', getUrlsLIstWithPerformanceRoute)
+            .get('/get_full_info_about_all_domains', getFullInfoAboutAllDomainsRoute)
     }
 };
 

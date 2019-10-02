@@ -10,6 +10,8 @@ function getPerformanceDataByUrlAndDate(user, urls, startDate, endDate, onSucces
         endDate
     }, (testDataList) => {
         const testDataWithTheMostLowerIndicator = getTheMostLowerIndicatorAtDay_1.default(testDataList);
+        console.log(testDataList);
+        console.log(testDataWithTheMostLowerIndicator);
         const sortedByModeTestData = sortByDeviceByMode_1.default(testDataWithTheMostLowerIndicator);
         onSuccess(sortedByModeTestData);
     }, onError, user);

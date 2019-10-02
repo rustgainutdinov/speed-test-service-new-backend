@@ -29,7 +29,7 @@ const domainQueries: IQueryArray = [
     },
     {
         name: 'get_full_info_about_all_domains',
-        rights: 200,
+        rights: 100,
         sql: 'SELECT domain.name as domain, u.name as added_by, favourite ' +
             'FROM domain ' +
             '         INNER JOIN "user" u on domain.added_by = u.id_user ' +

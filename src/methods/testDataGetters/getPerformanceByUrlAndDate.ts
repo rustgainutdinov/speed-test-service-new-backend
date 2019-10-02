@@ -12,6 +12,8 @@ function getPerformanceDataByUrlAndDate(user: User, urls: Array<string>, startDa
         endDate
     }, (testDataList: Array<ITestData>) => {
         const testDataWithTheMostLowerIndicator = getTheMostLowerIndicatorAtDay(testDataList);
+        console.log(testDataList);
+        console.log(testDataWithTheMostLowerIndicator);
         const sortedByModeTestData: ISortedByModeTestData = sortTestDataByMode(testDataWithTheMostLowerIndicator);
         onSuccess(sortedByModeTestData);
     }, onError, user);

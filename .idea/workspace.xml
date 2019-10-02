@@ -2,148 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6a97b38-6b5f-471b-8f33-845fdfcc66fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/routes/DomainRoute/getFullInfoAboutAllDomains.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Domain.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/PageSpeedTest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/SpeedTestService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/TestingServer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Url.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/User.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/config/appConfig.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/constants/db/queryParamRegExp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/constants/speedTest/auditIndicators.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/constants/speedTest/auditsIndicators.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/constants/speedTest/criticalIndicatorChange.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/constants/speedTest/criticalPerformanceChange.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/data_provider/DataBaseProvider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_domain.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_google_speed_test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_speed_test_service.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_test_data_getters.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_url.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/ITestingServerInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/app/IApplicationConfig.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/db/IDataBaseConfig.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/db/IDataBaseProvider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/db/IQuery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/db/IQueryArray.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/db/IQueryData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/domain/IDataWithDomainName.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/domain/IFullDomainData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/domain/IFullDomainInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/domain/IGroupedByDomainNameData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/pages/IFullInfoAboutUrlsAndDomains.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/routes/IApplicationRoute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/routes/IPathRoute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testData/IIndicatorValue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testData/IIndicatorsValueMap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testData/IMobileAndDesktopPerformanceWithUrl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testData/ISortedByDomainTestData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testData/ISortedByModeTestData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testData/ISorterByDomainAndModeTestData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testData/ITestData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testData/MobileAndDesktopPerformanceWithUrl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testData/MobileAndDesktopPerfromanceWithUrl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testData/SortedByDomainTestData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testData/SortedByModeTestData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testData/SorterByDomainAndModeTestData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testData/matchIndicatorsOnFall.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testingServer/IReceivedTestingData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testingServer/IReceveredTestingData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testingServer/IReciveredData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testingServer/IReciveredTestinfgData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testingServer/IReciveredTestingData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testingServer/ITestingDataToSave.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/testingServer/ITestingServerInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/url/IFullUrlData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/url/ISordetByModeUrlIndicatorsData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/url/ISortedByModeUrlIndicatorsData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/url/IUrlDataOnlyWithName.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/url/IUrlIndicatorsData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/url/IUrlNameAndModeList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/url/IUrlsDataOnlyWithName.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/url/IUrlsDataOnlyWithNameList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/url/IUrlsList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/url/IUrlsListDataFromDB.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/url/IUrlsNameList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/user/IDataToAuth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/user/IPublicUserData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/user/IUserDataOnlyWithPass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/user/IUserDataOnlyWithRights.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/user/IUserDataToAuth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/user/IUserSubscriptions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfaces/user/dataToAuth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/app/errorHangler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/app/setResponseSettings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/crypt/comparePass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/crypt/cryptPass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/domain/groupDataByDomainName.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/pages/getInfoAboutUrlAndDomainForAdminPanel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/pages/getInfoAboutUrlAndDomainForAdminPanelRoute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/pages/mergeFullInfoAboutUrlsAndDomains.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testDataGetters/getMainPageTestData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testDataGetters/getPerformanceByUrlAndDate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testDataGetters/getPerformanceDataForLastWeek.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testDataGetters/getSelectedIndicatorsByUrlAndDate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testDataGetters/getUrlsListWithPerformance.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testDataSort/IChangedIndicator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testDataSort/getLowerIndicatorAtSameDate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testDataSort/getMiddleIndicatorsForPeriod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testDataSort/getTheMostLowerIndicatorAtDay.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testDataSort/matchIndicatorsOnFall.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testDataSort/sortByDeviceByDomain.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testDataSort/sortByDeviceByMode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testDataSort/sortTestDataByDomainAndMode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testingServer/PrepareTestingDataToSave.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/url/getNamesListFromUrlsDataOnlyWithNameList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/user/comparePass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/user/cryptPass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/middleware/checkOnParamsExists.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/middleware/validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/AppRoutes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/DomainRoute/changeIsFavouriteField.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/DomainRoute/changeIsFavouriteRow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/DomainRoute/create.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/DomainRoute/delete.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/DomainRoute/getUrlsLIstWithPerformance.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/DomainRoute/getUrlsLIstWithPerfromance.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/DomainRoute/getUrlsListByDomain.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/DomainRoute/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/DomainRoute/remove.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/PagesRoute/getInfoAboutUrlAndDomainForAdminPanel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/PagesRoute/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/TestDataGetters/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/TestDataGettersRoute/getPerformanceDataByUrlAndDate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/TestDataGettersRoute/getPerformanceDataForLastWeek.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/TestDataGettersRoute/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/TestingServerRoute/getTokenByAppKey.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/TestingServerRoute/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/TestingServerRoute/saveTestingData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/TestingServerRoute/testAllUrls.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/TestingServerRoute/testUrlsList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/UrlRoute/changeIsFavouriteField.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/UrlRoute/create.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/UrlRoute/getFallenIndicators.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/UrlRoute/getSelectedIndicatorsByDate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/UrlRoute/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/UrlRoute/remove.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/UserRoute/create.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/UserRoute/getUserDataByToken.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/UserRoute/getUserSubcriptions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/UserRoute/getUserSubscriptionsRoute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/UserRoute/get_subscibed_domains.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/UserRoute/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/UserRoute/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/UserRoute/subscribeToDomain.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/UserRoute/unscribeToDomain.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/appConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/appConfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/domain/IDataWithDomainName.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/domain/IDataWithDomainName.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/methods/domain/groupDataByDomainName.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/methods/domain/groupDataByDomainName.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/methods/testDataSort/matchIndicatorsOnFall.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/methods/testDataSort/matchIndicatorsOnFall.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_domain.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_domain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/methods/testDataGetters/getPerformanceByUrlAndDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/methods/testDataGetters/getPerformanceByUrlAndDate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/methods/testDataSort/getTheMostLowerIndicatorAtDay.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/methods/testDataSort/getTheMostLowerIndicatorAtDay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/routes/DomainRoute/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/routes/DomainRoute/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_domain.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_domain.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/methods/testDataGetters/getPerformanceByUrlAndDate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/methods/testDataGetters/getPerformanceByUrlAndDate.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/methods/testDataSort/getTheMostLowerIndicatorAtDay.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/methods/testDataSort/getTheMostLowerIndicatorAtDay.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/DomainRoute/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/DomainRoute/index.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -242,7 +110,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569236714422</updated>
       <workItem from="1569236715780" duration="2024000" />
-      <workItem from="1569331163978" duration="74417000" />
+      <workItem from="1569331163978" duration="78630000" />
     </task>
     <servers />
   </component>

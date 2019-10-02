@@ -8,7 +8,7 @@ function getTheMostLowerIndicatorAtDay(testDataList) {
             if (testDataWithLowerIndicators.indicator === testData.indicator
                 && testDataWithLowerIndicators.url === testData.url
                 && testDataWithLowerIndicators.mode === testData.mode
-                && testDataWithLowerIndicators.date === testData.date) {
+                && testDataWithLowerIndicators.date.toString() === testData.date.toString()) {
                 isItemWithSameUrlAndModeAndDateExists = true;
                 if (testDataWithLowerIndicators.value > testData.value) {
                     testDataWithLowerIndicators = testData;
