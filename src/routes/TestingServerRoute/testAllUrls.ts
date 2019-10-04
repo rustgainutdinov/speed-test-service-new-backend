@@ -15,7 +15,7 @@ function testAllUrls(req: Request, res: Response, next: NextFunction): void {
         return
     }
     const user: User = new User(queryData.token);
-    Url.getAllUrls(user, (urlsList: IUrlDataOnlyWithNameList) => {
+    Url.getAllUrls((urlsList: IUrlDataOnlyWithNameList) => {
         TestingServer.testUrlsList(user, urlsList, () => {
             res.json('Ok');
         }, next)

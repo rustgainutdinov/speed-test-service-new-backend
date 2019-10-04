@@ -7,8 +7,36 @@ class Domain {
         this.name = name;
     }
     static create(data, user, onSuccess, onError) {
+        this.isDomainExist(data.domain, user, (isDomainExist) => {
+            if (!isDomainExist) {
+                this.addNewDomain(data, user, onSuccess, onError);
+                return;
+            }
+            const domain = new Domain(data.domain);
+            domain.getIsDeletedField(user, (isDomainDeletedData) => {
+                if (isDomainDeletedData[0] && isDomainDeletedData[0].is_deleted) {
+                    domain.returnFromTrash(user, onSuccess, onError);
+                }
+                else {
+                    onError(new Error('Домен уже существует'));
+                }
+            }, onError);
+        }, onError);
+    }
+    static addNewDomain(data, user, onSuccess, onError) {
         App_1.default.getDBInstance().execute('add_new_domain', data, () => {
             onSuccess(new Domain(data.name));
+        }, onError, user);
+    }
+    static isDomainExist(domain, user, onSuccess, onError) {
+        App_1.default.getDBInstance().execute('get_full_info_about_domain', { domain }, (result) => {
+            try {
+                result[0].domain;
+                onSuccess(true);
+            }
+            catch (e) {
+                onSuccess(false);
+            }
         }, onError, user);
     }
     static getFullInfoAboutAllDomains(user, onSuccess, onError) {
@@ -31,6 +59,12 @@ class Domain {
     }
     getUrlsListWithPerformance(user, onSuccess, onError) {
         App_1.default.getDBInstance().execute('get_urls_list_with_performance', { domain: this.name }, onSuccess, onError, user);
+    }
+    getIsDeletedField(user, onSuccess, onError) {
+        App_1.default.getDBInstance().execute('get_is_deleted_domain_field', { domain: this.name }, onSuccess, onError, user);
+    }
+    returnFromTrash(user, onSuccess, onError) {
+        App_1.default.getDBInstance().execute('return_domain_from_trash', { domain: this.name }, onSuccess, onError, user);
     }
 }
 exports.default = Domain;

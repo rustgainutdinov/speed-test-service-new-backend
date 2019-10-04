@@ -12,5 +12,8 @@ class PageSpeedTest {
             onSuccess(idTest);
         }, onError);
     }
+    getTestingUrlsByTestId(onSuccess, onError) {
+        App_1.default.getDBInstance().execute('get_urls_name_by_test_id', { idTest: this.idTest }, onSuccess, onError);
+    }
 }
 exports.default = PageSpeedTest;

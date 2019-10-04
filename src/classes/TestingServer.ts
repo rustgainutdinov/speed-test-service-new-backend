@@ -11,6 +11,7 @@ import IUrlDataOnlyWithName from "../interfaces/url/IUrlDataOnlyWithName";
 import User from "./User";
 import PageSpeedTest from "./PageSpeedTest";
 import axios from 'axios';
+import notifyUsersAboutFallenUrls from "../methods/mail/notifyUsersAboutFallenUrls";
 
 class TestingServer {
     private readonly ip: string;
@@ -76,7 +77,14 @@ class TestingServer {
 
     saveTestingData(data: Array<IReceivedTestingData>, token: string, idTest: string, onSuccess: Function, onError: Function) {
         const testingDataToSave: Array<ITestingDataToSave> = prepareTestingDataToSave(data, token, idTest);
-        App.getDBInstance().execute('save_testing_data', {data: testingDataToSave}, onSuccess, onError);
+        App.getDBInstance().execute('save_testing_data', {data: testingDataToSave}, () => {
+            notifyUsersAboutFallenUrls(idTest, (err: Error) => {
+                if (err) {
+                    console.log(err);
+                }
+            });
+            onSuccess();
+        }, onError);
     }
 }
 

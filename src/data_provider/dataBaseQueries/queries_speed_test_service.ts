@@ -7,13 +7,15 @@ const speedTestServiceQueries: IQueryArray = [
         sql: `SELECT key_hash, token, port
 					FROM speed_test_service
 					WHERE ip = ?(ip);`
-    }, {
+    },
+    {
         name: 'set_speed_test_service_token',
         rights: 0,
         sql: `UPDATE speed_test_service
 					SET token = ?(token)
 					WHERE ip = ?(ip);`
-    }, {
+    },
+    {
         name: 'save_testing_data',
         rights: 0,
         sql: 'INSERT INTO test_data (id_user, id_speed_test_service, id_test, id_indicator_name, id_url, mode, value) ' +
@@ -23,7 +25,8 @@ const speedTestServiceQueries: IQueryArray = [
             '    (SELECT id_indicator_name FROM indicator_name WHERE name = ?(indicator)),' +
             '    (SELECT id_url FROM url WHERE name = ?(url)),' +
             ' ?(mode), ?(value)]'
-    }, {
+    },
+    {
         name: 'get_last_url_speed_test_data',
         rights: 0,
         sql: 'SELECT * ' +
@@ -35,6 +38,15 @@ const speedTestServiceQueries: IQueryArray = [
             'ORDER BY t.date_time DESC ' +
             'LIMIT 2 ' +
             'OFFSET 2;'
+    },
+    {
+        name: 'get_urls_name_by_test_id',
+        rights: 0,
+        sql: 'SELECT DISTINCT u.name ' +
+            'FROM test ' +
+            '         INNER JOIN test_data td on test.id_test = td.id_test ' +
+            '         INNER JOIN url u on td.id_url = u.id_url ' +
+            'WHERE test.id_test = ?(idTest);'
     }
 ];
 

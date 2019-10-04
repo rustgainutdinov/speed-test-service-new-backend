@@ -2,16 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6a97b38-6b5f-471b-8f33-845fdfcc66fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/routes/DomainRoute/getFullInfoAboutAllDomains.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/dateTime/dateTimeFromat.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/domain/IIsPageDeleted.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/testData/IDataForUsersEmails.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/testData/IUrlChangedIndicators.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/testData/IUrlsChangedIndicatorsMap.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/user/IUserSubscription.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/methods/mail/drawMail.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/methods/mail/notifyUsersAboutFallenUrls.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/methods/mail/sendMail.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Domain.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/classes/Domain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/PageSpeedTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/classes/PageSpeedTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/TestingServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/classes/TestingServer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/classes/Url.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/classes/Url.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_domain.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_domain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testDataGetters/getPerformanceByUrlAndDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/methods/testDataGetters/getPerformanceByUrlAndDate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/testDataSort/getTheMostLowerIndicatorAtDay.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/methods/testDataSort/getTheMostLowerIndicatorAtDay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/DomainRoute/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/routes/DomainRoute/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_google_speed_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_google_speed_test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_speed_test_service.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_speed_test_service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_url.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_url.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/methods/app/errorHangler.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/methods/app/errorHangler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/routes/TestingServerRoute/testAllUrls.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/routes/TestingServerRoute/testAllUrls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Domain.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Domain.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/PageSpeedTest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/PageSpeedTest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/TestingServer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/TestingServer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Url.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Url.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_domain.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_domain.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/methods/testDataGetters/getPerformanceByUrlAndDate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/methods/testDataGetters/getPerformanceByUrlAndDate.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/methods/testDataSort/getTheMostLowerIndicatorAtDay.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/methods/testDataSort/getTheMostLowerIndicatorAtDay.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/DomainRoute/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/DomainRoute/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_google_speed_test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_google_speed_test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_speed_test_service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_speed_test_service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_url.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_url.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/methods/app/errorHangler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/methods/app/errorHangler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/methods/testDataSort/IChangedIndicator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/testData/IChangedIndicator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/methods/testDataSort/matchIndicatorsOnFall.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/methods/testDataSort/matchIndicatorsOnFall.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/TestingServerRoute/testAllUrls.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/TestingServerRoute/testAllUrls.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/UrlRoute/getFallenIndicators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/UrlRoute/getFallenIndicators.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,11 +77,11 @@
       <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\routes\TestingServerRoute" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\interfaces\testData" />
       <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\methods\testDataSort" />
       <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\interfaces\testingServer" />
       <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\data_types\db" />
       <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\data_types\app" />
-      <recent name="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\src\data_provider" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -110,7 +135,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569236714422</updated>
       <workItem from="1569236715780" duration="2024000" />
-      <workItem from="1569331163978" duration="78630000" />
+      <workItem from="1569331163978" duration="98017000" />
     </task>
     <servers />
   </component>

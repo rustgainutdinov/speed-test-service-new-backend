@@ -6,6 +6,6 @@ const googleSpeedTestQueries = [
         rights: 0,
         sql: `INSERT INTO test (id_test, date_time)
 					VALUES (?(idTest), now());`
-    },
+    }
 ];
 exports.default = googleSpeedTestQueries;

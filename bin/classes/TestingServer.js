@@ -6,6 +6,7 @@ const generateGUID = require("uuid/v4");
 const prepareTestingDataToSave_1 = require("../methods/testingServer/prepareTestingDataToSave");
 const PageSpeedTest_1 = require("./PageSpeedTest");
 const axios_1 = require("axios");
+const notifyUsersAboutFallenUrls_1 = require("../methods/mail/notifyUsersAboutFallenUrls");
 class TestingServer {
     constructor(ip, token) {
         this.ip = ip;
@@ -64,7 +65,14 @@ class TestingServer {
     }
     saveTestingData(data, token, idTest, onSuccess, onError) {
         const testingDataToSave = prepareTestingDataToSave_1.default(data, token, idTest);
-        App_1.default.getDBInstance().execute('save_testing_data', { data: testingDataToSave }, onSuccess, onError);
+        App_1.default.getDBInstance().execute('save_testing_data', { data: testingDataToSave }, () => {
+            notifyUsersAboutFallenUrls_1.default(idTest, (err) => {
+                if (err) {
+                    console.log(err);
+                }
+            });
+            onSuccess();
+        }, onError);
     }
 }
 exports.default = TestingServer;

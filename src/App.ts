@@ -1,12 +1,15 @@
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
-import {Express, NextFunction, Request, Response} from 'express';
+import {Express} from 'express';
 import IApplicationConfig from './interfaces/app/IApplicationConfig'
 import AppRoutes from './routes/AppRoutes';
 import IDataBaseProvider from "./interfaces/db/IDataBaseProvider";
 import DataBaseProvider from "./data_provider/DataBaseProvider";
 import errorHandler from "./methods/app/errorHangler";
 import setResponseSettings from "./methods/app/setResponseSettings";
+import {Request} from "express";
+import {Response} from "express";
+import {NextFunction} from "express";
 
 export default class App {
     private static app: App;
@@ -33,7 +36,6 @@ export default class App {
         }));
         this.expApp.use(bodyParser.json());
         this.expApp.use(setResponseSettings);
-        this.expApp.use(errorHandler);
         let appRouter = new AppRoutes();
         appRouter.mount(this.expApp);
         this.expApp.listen(this.config.listenPort, (err) => {
@@ -43,5 +45,6 @@ export default class App {
                 console.log("Server run on port: " + this.config.listenPort);
             }
         });
+        this.expApp.use(errorHandler);
     }
 }

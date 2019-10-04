@@ -26,7 +26,6 @@ class App {
         }));
         this.expApp.use(bodyParser.json());
         this.expApp.use(setResponseSettings_1.default);
-        this.expApp.use(errorHangler_1.default);
         let appRouter = new AppRoutes_1.default();
         appRouter.mount(this.expApp);
         this.expApp.listen(this.config.listenPort, (err) => {
@@ -37,6 +36,7 @@ class App {
                 console.log("Server run on port: " + this.config.listenPort);
             }
         });
+        this.expApp.use(errorHangler_1.default);
     }
 }
 exports.default = App;

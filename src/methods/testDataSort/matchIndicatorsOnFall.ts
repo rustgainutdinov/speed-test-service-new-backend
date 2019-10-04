@@ -1,6 +1,6 @@
 import IIndicatorsValueMap from "../../interfaces/testData/IIndicatorsValueMap";
 import ITestData from "../../interfaces/testData/ITestData";
-import IChangedIndicator from "./IChangedIndicator";
+import IChangedIndicator from "../../interfaces/testData/IChangedIndicator";
 import CRITICAL_INDICATOR_CHANGE from "../../constants/speedTest/criticalIndicatorChange";
 import CRITICAL_PERFORMANCE_CHANGE from "../../constants/speedTest/criticalPerformanceChange";
 

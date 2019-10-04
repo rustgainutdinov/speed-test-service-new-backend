@@ -10,15 +10,44 @@ class Url {
         this.name = name;
     }
     static create(data, user, onSuccess, onError) {
+        this.isUrlExist(data.urlName, user, (isUrlExist) => {
+            if (!isUrlExist) {
+                this.addNewUrl(data, user, onSuccess, onError);
+                return;
+            }
+            const url = new Url(data.urlName);
+            url.getIsDeletedField(user, (isPageDeletedData) => {
+                if (isPageDeletedData[0] && isPageDeletedData[0].is_deleted) {
+                    url.returnFromTrash(user, onSuccess, onError);
+                }
+                else {
+                    onError(new Error('Страница уже существует'));
+                }
+            }, onError);
+        }, onError);
+    }
+    static addNewUrl(data, user, onSuccess, onError) {
         App_1.default.getDBInstance().execute('add_new_url', data, () => {
             onSuccess(new Url(data.urlName));
+        }, onError, user);
+    }
+    static isUrlExist(url, user, onSuccess, onError) {
+        App_1.default.getDBInstance().execute('get_full_info_about_url', { url }, (result) => {
+            console.log(result[0]);
+            try {
+                result[0].url;
+                onSuccess(true);
+            }
+            catch (e) {
+                onSuccess(false);
+            }
         }, onError, user);
     }
     static getFullInfoAboutAllUrls(user, onSuccess, onError) {
         App_1.default.getDBInstance().execute('get_full_info_about_all_urls', null, onSuccess, onError, user);
     }
-    static getAllUrls(user, onSuccess, onError) {
-        App_1.default.getDBInstance().execute('get_all_urls', null, onSuccess, onError, user);
+    static getAllUrls(onSuccess, onError) {
+        App_1.default.getDBInstance().execute('get_all_urls', null, onSuccess, onError);
     }
     changeIsFavouriteField(isFavourite, user, onSuccess, onError) {
         App_1.default.getDBInstance().execute('change_url_is_favourite_field', {
@@ -62,6 +91,12 @@ class Url {
                 });
             }, onError);
         }, onError);
+    }
+    getIsDeletedField(user, onSuccess, onError) {
+        App_1.default.getDBInstance().execute('get_is_deleted_url_field', { url: this.name }, onSuccess, onError, user);
+    }
+    returnFromTrash(user, onSuccess, onError) {
+        App_1.default.getDBInstance().execute('return_url_from_trash', { url: this.name }, onSuccess, onError, user);
     }
 }
 exports.default = Url;

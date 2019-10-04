@@ -31,7 +31,7 @@ const urlQueries = [
     },
     {
         name: 'get_all_urls',
-        rights: 200,
+        rights: 0,
         sql: 'SELECT name FROM url WHERE url.is_deleted = \'FALSE\';'
     },
     {
@@ -76,6 +76,27 @@ const urlQueries = [
             '  AND u.is_deleted = \'FALSE\' ' +
             '  ORDER BY date_time DESC  ' +
             '  LIMIT 40;'
+    },
+    {
+        name: 'get_full_info_about_url',
+        rights: 0,
+        sql: 'SELECT url.name as url, d.name as domain, u.name as added_by, url.favourite ' +
+            'FROM url ' +
+            '         INNER JOIN domain d on url.id_domain = d.id_domain ' +
+            '         INNER JOIN "user" u on d.added_by = u.id_user ' +
+            'WHERE url.name = ?(url);'
+    },
+    {
+        name: 'get_is_deleted_url_field',
+        rights: 200,
+        sql: 'SELECT is_deleted ' +
+            'FROM url ' +
+            'WHERE name = ?(url);'
+    },
+    {
+        name: 'return_url_from_trash',
+        rights: 200,
+        sql: 'UPDATE url SET is_deleted = \'FALSE\' WHERE name = ?(url);'
     }
 ];
 exports.default = urlQueries;
