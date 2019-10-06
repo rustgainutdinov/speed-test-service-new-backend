@@ -20,7 +20,9 @@ class User {
         }
         App_1.default.getDBInstance().execute('create_user', data, () => {
             onCreate(new User(undefined, data.email, userPass));
-        }, onError);
+        }, (err) => {
+            onError(new Error('Этот email уже занят'));
+        });
     }
     ;
     getPublicUserDataByToken(onSuccess, onError) {
@@ -29,7 +31,7 @@ class User {
                 onSuccess(listOfPublicUserData[0]);
             }
             catch (err) {
-                onError(new Error('User is not found'));
+                onError(new Error('Неверный логин или пароль'));
             }
         }, onError);
     }
@@ -44,7 +46,7 @@ class User {
                 onError(e);
             }
             if (!arePassAndHashEqual) {
-                onError(new Error('User data is incorrect'));
+                onError(new Error('Неверный логин или пароль'));
             }
             this.token = generateGUID();
             App_1.default.getDBInstance().execute('set_token', {

@@ -17,7 +17,8 @@ const testDataGettersQueries: IQueryArray = [
             '  AND u.is_deleted = \'FALSE\' ' +
             '  AND d3.favourite = \'TRUE\' ' +
             '  AND u.favourite = \'TRUE\' ' +
-            '  AND "in".name = \'performance\';'
+            '  AND "in".name = \'performance\' ' +
+            '  ORDER BY display_priority;'
     },
     {
         name: 'get_urls_list_with_performance',
@@ -45,7 +46,8 @@ const testDataGettersQueries: IQueryArray = [
             '         INNER JOIN domain d2 ' +
             '                    on url.id_domain = d2.id_domain ' +
             'WHERE d2.name = ?(domain) ' +
-            '  AND d2.is_deleted = \'FALSE\';'
+            '  AND d2.is_deleted = \'FALSE\' ' +
+            '  AND url.is_deleted = \'FALSE\';'
     },
     {
         name: 'get_performance_by_url_and_date',

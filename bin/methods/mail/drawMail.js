@@ -16,16 +16,25 @@ function drawMail(data) {
         </td>
     </tr>
 <tr>    <td style="border: none; padding: 20px">`;
+    let isTestDataEmpty = true;
     for (let url in data) {
         if (data[url]) {
-            htmlText += drawUrlTable(data[url].mobile, url);
+            const mobileText = drawUrlTable(data[url].mobile, url, 'mobile');
+            const desktopText = drawUrlTable(data[url].desktop, url, 'desktop');
+            if (mobileText || desktopText) {
+                isTestDataEmpty = false;
+            }
+            htmlText += mobileText + desktopText;
         }
+    }
+    if (isTestDataEmpty) {
+        htmlText += '<b style="font-size: 18px">Упавшие показатели отсутствуют</b>';
     }
     return htmlText + `</td></tr></table></body></html>`;
 }
-function drawUrlTable(urlData, url) {
+function drawUrlTable(urlData, url, mode) {
     let isPerformanceFall = false;
-    let htmlUrlsTableText = drawTableTitle(url);
+    let htmlUrlsTableText = drawTableTitle(url + ' (' + mode + ')');
     htmlUrlsTableText += '<table align="center" cellpadding="0" cellspacing="0" width="100%" style="text-align: left; margin-top: 25px">';
     htmlUrlsTableText += drawTableHead();
     urlData.forEach((rowData) => {

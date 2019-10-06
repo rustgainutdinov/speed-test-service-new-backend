@@ -17,18 +17,26 @@ function drawMail(data: IUrlsChangedIndicatorsMap): string {
         </td>
     </tr>
 <tr>    <td style="border: none; padding: 20px">`;
-
+    let isTestDataEmpty: boolean = true;
     for (let url in data) {
         if (data[url]) {
-            htmlText += drawUrlTable(data[url].mobile, url);
+            const mobileText: string = drawUrlTable(data[url].mobile, url, 'mobile');
+            const desktopText: string = drawUrlTable(data[url].desktop, url, 'desktop');
+            if (mobileText || desktopText) {
+                isTestDataEmpty = false;
+            }
+            htmlText += mobileText + desktopText;
         }
+    }
+    if (isTestDataEmpty) {
+        htmlText += '<b style="font-size: 18px">Упавшие показатели отсутствуют</b>';
     }
     return htmlText + `</td></tr></table></body></html>`
 }
 
-function drawUrlTable(urlData: Array<IChangedIndicator>, url: string): string {
+function drawUrlTable(urlData: Array<IChangedIndicator>, url: string, mode: string): string {
     let isPerformanceFall: boolean = false;
-    let htmlUrlsTableText: string = drawTableTitle(url);
+    let htmlUrlsTableText: string = drawTableTitle(url + ' (' + mode + ')');
     htmlUrlsTableText += '<table align="center" cellpadding="0" cellspacing="0" width="100%" style="text-align: left; margin-top: 25px">';
     htmlUrlsTableText += drawTableHead();
     urlData.forEach((rowData: any) => {

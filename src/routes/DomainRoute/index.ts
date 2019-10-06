@@ -5,6 +5,7 @@ import removeDomainRoute from "./remove";
 import getUrlsListByDomain from "./getUrlsListByDomain";
 import getUrlsLIstWithPerformanceRoute from "./getUrlsLIstWithPerformance";
 import getFullInfoAboutAllDomainsRoute from "./getFullInfoAboutAllDomains";
+import changeDomainPriorityRoute from "./changeDisplayPriority";
 
 const DomainRoute: IApplicationRoute = {
     createRouter(router) {
@@ -15,6 +16,7 @@ const DomainRoute: IApplicationRoute = {
             .get('/get_urls_list', getUrlsListByDomain)
             .get('/get_urls_list_with_performance', getUrlsLIstWithPerformanceRoute)
             .get('/get_full_info_about_all_domains', getFullInfoAboutAllDomainsRoute)
+            .post('/change_domain_priority', changeDomainPriorityRoute)
     }
 };
 

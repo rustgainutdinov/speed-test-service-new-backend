@@ -33,7 +33,8 @@ const domainQueries = [
         sql: 'SELECT domain.name as domain, u.name as added_by, favourite ' +
             'FROM domain ' +
             '         INNER JOIN "user" u on domain.added_by = u.id_user ' +
-            'WHERE domain.is_deleted = \'FALSE\';'
+            'WHERE domain.is_deleted = \'FALSE\' ' +
+            'ORDER BY display_priority;'
     },
     {
         name: 'get_is_deleted_domain_field',
@@ -56,5 +57,17 @@ const domainQueries = [
         sql: 'UPDATE domain SET is_deleted = \'FALSE\' WHERE name = ?(domain); ' +
             'UPDATE url SET is_deleted = \'FALSE\' WHERE id_domain = (SELECT id_domain FROM domain WHERE name = ?(domain));'
     },
+    {
+        name: 'clean_display_priority',
+        rights: 200,
+        sql: 'UPDATE domain SET display_priority = NULL;'
+    },
+    {
+        name: 'set_display_priority',
+        rights: 200,
+        sql: 'UPDATE domain ' +
+            'SET display_priority = ?(i) ' +
+            'WHERE name = ?(domain);'
+    }
 ];
 exports.default = domainQueries;

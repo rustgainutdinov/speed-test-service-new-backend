@@ -42,6 +42,15 @@ class Domain {
     static getFullInfoAboutAllDomains(user, onSuccess, onError) {
         App_1.default.getDBInstance().execute('get_full_info_about_all_domains', null, onSuccess, onError, user);
     }
+    static changeDisplayPriority(user, domainsList, onSuccess, onError) {
+        App_1.default.getDBInstance().execute('clean_display_priority', null, () => {
+            domainsList.forEach((domain, i) => {
+                App_1.default.getDBInstance().execute('set_display_priority', { domain, i: i + 1 }, () => {
+                }, onError, user);
+            });
+            onSuccess();
+        }, onError, user);
+    }
     changeIsFavouriteField(isFavourite, user, onSuccess, onError) {
         App_1.default.getDBInstance().execute('change_domain_is_favourite_field', {
             isFavourite,

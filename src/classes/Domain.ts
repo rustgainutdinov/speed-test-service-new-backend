@@ -47,6 +47,16 @@ class Domain {
         App.getDBInstance().execute('get_full_info_about_all_domains', null, onSuccess, onError, user);
     }
 
+    static changeDisplayPriority(user: User, domainsList: Array<string>, onSuccess: Function, onError: Function) {
+        App.getDBInstance().execute('clean_display_priority', null, () => {
+            domainsList.forEach((domain: string, i: number) => {
+                App.getDBInstance().execute('set_display_priority', {domain, i: i + 1}, () => {
+                }, onError, user);
+            });
+            onSuccess();
+        }, onError, user);
+    }
+
     constructor(name: string) {
         this.name = name
     }
