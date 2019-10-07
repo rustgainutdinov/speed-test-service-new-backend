@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6a97b38-6b5f-471b-8f33-845fdfcc66fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/db_changes/changes.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/DomainRoute/changeDisplayPriority.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/Domain.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/classes/Domain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/classes/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/classes/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_domain.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_domain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_test_data_getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/data_provider/dataBaseQueries/queries_test_data_getters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/methods/mail/drawMail.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/methods/mail/drawMail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/routes/DomainRoute/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/routes/DomainRoute/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/Domain.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Domain.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/User.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_domain.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_domain.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_test_data_getters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_provider/dataBaseQueries/queries_test_data_getters.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/methods/mail/drawMail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/methods/mail/drawMail.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/DomainRoute/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/DomainRoute/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_changes/changes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db_changes/changes.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569236714422</updated>
       <workItem from="1569236715780" duration="2024000" />
-      <workItem from="1569331163978" duration="103558000" />
+      <workItem from="1569331163978" duration="104664000" />
     </task>
     <servers />
   </component>
