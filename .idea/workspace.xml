@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f6a97b38-6b5f-471b-8f33-845fdfcc66fb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_changes/changes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db_changes/changes.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +30,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/constants/speedTest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../frontend" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\rustam.gainutdinov\Documents\projects\speed-test-servive\backend-new\node_modules\typescript\lib" />
   </component>
@@ -103,6 +102,7 @@
       <updated>1569236714422</updated>
       <workItem from="1569236715780" duration="2024000" />
       <workItem from="1569331163978" duration="104664000" />
+      <workItem from="1570434714916" duration="33000" />
     </task>
     <servers />
   </component>
@@ -114,7 +114,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
